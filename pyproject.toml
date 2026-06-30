@@ -1,0 +1,42 @@
+[project]
+name = "ai-simple-engine-musicgen"
+version = "0.0.1"
+description = "AI Simple Engine Musicgen Module"
+authors = [
+    {name = "danialcala94", email = "danielalcalavalera@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+
+[tool.poetry.dependencies]
+# Mandatory
+ai-simple-engine = { version = ">=0.1.4,<1.0.0", optional = false }
+ai-simple-engine-backend-huggingface = { version = ">=0.0.1,<1.0.0", optional = false }
+transformers = { version = ">=5.12.1,<9999.0.0", optional = false }
+# 'torch==2.5.1' was working in previous projects
+# TODO: Uncomment this for GPU version (~2.5GB)
+torch = { version = "==2.5.1", source = "pytorch", optional = false }
+# torch = { version = ">=2.12.1,<9999.0.0", optional = false }
+# Optional
+
+[tool.poetry]
+packages = [{include = "ai_simple_engine_musicgen", from = "src"}]
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+# url = "https://download.pytorch.org/whl/cu129"
+priority = "explicit"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[tool.pytest.ini_options]
+markers = [
+    "mandatory: mandatory tests for release",
+    "additional: exhaustive and demanding tests"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
