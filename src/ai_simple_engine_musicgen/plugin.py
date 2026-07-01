@@ -35,8 +35,12 @@ class MusicgenPlugin(
             .add_model_loader(MusicGenLoader())
         )
 
-        # TODO: Is this ok (?)
-        # ModelExecutor registry service
+        """
+        Create the specific registry for the `musicgen`
+        model executor, register the specific model
+        executors, and register it as a service into
+        the builder.
+        """
         registry = MusicGenModelExecutorRegistry()
 
         registry.register(

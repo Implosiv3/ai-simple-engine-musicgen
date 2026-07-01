@@ -2,14 +2,14 @@
 
 [[package]]
 name = "ai-simple-engine"
-version = "0.1.6"
+version = "0.1.7"
 description = "AI Simple Engine"
 optional = false
 python-versions = "<3.12,>=3.10"
 groups = ["main"]
 files = [
-    {file = "ai_simple_engine-0.1.6-py3-none-any.whl", hash = "sha256:07f2b04b49f16e7c43a4c9e93c0393bc6a6ca8854f32daf0197de3dc2c7db96d"},
-    {file = "ai_simple_engine-0.1.6.tar.gz", hash = "sha256:e4ea8588caed66a6f44c7c9a16c386cbc968fb47d9a4337f259e463ab46b5edf"},
+    {file = "ai_simple_engine-0.1.7-py3-none-any.whl", hash = "sha256:b8299778999c4526ed47a3f16c07a24714e913311acca38a6c25e2265d48fa8f"},
+    {file = "ai_simple_engine-0.1.7.tar.gz", hash = "sha256:16453aef393ec155074a9edc3379b8cdfded8ca20a93286ca73dbfba071b41a3"},
 ]
 
 [[package]]
@@ -1386,4 +1386,4 @@ markers = {dev = "python_version == \"3.10\""}
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.12"
-content-hash = "8f8402aaf645cbbab93739ea8c67521fbf01bb1030149cf099ed5649240bd7d9"
+content-hash = "974dd8d32604c9673e35f03bb8578d138f8614c7ef83efd0a8809b66bc660752"
