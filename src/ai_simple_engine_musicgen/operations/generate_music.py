@@ -1,4 +1,4 @@
-from ai_simple_engine_musicgen.models.executor.registry.musicgen_model_executor_registry import MusicGenModelExecutorRegistry
+from ai_simple_engine_musicgen.models.executor.registry.musicgen_model_executor_registry import MusicgenModelExecutorRegistry
 from ai_simple_engine.types.data_type.base import AUDIO, LOADED_MODEL, STRING
 from ai_simple_engine.graph.operation.base import Operation
 from ai_simple_engine.graph.input import Input
@@ -9,7 +9,7 @@ class GenerateMusic(
     Operation
 ):
 
-    model: 'LoadedModel[LoadedMusicGenModel]' = Input(LOADED_MODEL)
+    model: 'LoadedModel[LoadedMusicgenModel]' = Input(LOADED_MODEL)
     """
     The `LoadedModel` tha will enter as input.
     """
@@ -34,7 +34,7 @@ class GenerateMusic(
         make this a 'self._runner' that is automatically
         registered.
         """
-        registry = context.services.get(MusicGenModelExecutorRegistry)
+        registry = context.services.get(MusicgenModelExecutorRegistry)
 
         runner = registry.resolve(self.model)
 

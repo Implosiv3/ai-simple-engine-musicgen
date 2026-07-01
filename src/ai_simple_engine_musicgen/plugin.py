@@ -1,7 +1,7 @@
 from ai_simple_engine_musicgen.consts import MUSICGEN_MODEL_FAMILY_NAME
-from ai_simple_engine_musicgen.models.executor.transformers_musicgen_model_executor import TransformersMusicGenModelExecutor
-from ai_simple_engine_musicgen.models.executor.registry.musicgen_model_executor_registry import MusicGenModelExecutorRegistry
-from ai_simple_engine_musicgen.models.loaders.musicgen_loader import MusicGenLoader
+from ai_simple_engine_musicgen.models.executor.transformers_musicgen_model_executor import TransformersMusicgenModelExecutor
+from ai_simple_engine_musicgen.models.executor.registry.musicgen_model_executor_registry import MusicgenModelExecutorRegistry
+from ai_simple_engine_musicgen.models.loaders.musicgen_loader import MusicgenLoader
 from ai_simple_engine.engine_builder import EngineBuilder
 from ai_simple_engine.plugins.plugin import Plugin
 
@@ -14,8 +14,8 @@ class MusicgenPlugin(
     functionality.
 
     This plugin includes:
-    - `MusicGenLoader`
-    - `TransformersMusicGenModelExecutor` (for
+    - `MusicgenLoader`
+    - `TransformersMusicgenModelExecutor` (for
     `musicgen`)
 
     This plugin gives you the next operations:
@@ -32,7 +32,7 @@ class MusicgenPlugin(
         # Model loaders
         (
             builder
-            .add_model_loader(MusicGenLoader())
+            .add_model_loader(MusicgenLoader())
         )
 
         """
@@ -41,16 +41,16 @@ class MusicgenPlugin(
         executors, and register it as a service into
         the builder.
         """
-        registry = MusicGenModelExecutorRegistry()
+        registry = MusicgenModelExecutorRegistry()
 
         registry.register(
             MUSICGEN_MODEL_FAMILY_NAME,
-            TransformersMusicGenModelExecutor()
+            TransformersMusicgenModelExecutor()
         )
 
         (
             builder.add_service(
-                MusicGenModelExecutorRegistry,
+                MusicgenModelExecutorRegistry,
                 registry
             )
         )

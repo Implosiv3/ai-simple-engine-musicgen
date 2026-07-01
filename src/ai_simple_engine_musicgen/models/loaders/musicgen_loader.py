@@ -1,4 +1,4 @@
-from ai_simple_engine_musicgen.models.loaded_musicgen_model import LoadedMusicGenModel
+from ai_simple_engine_musicgen.models.loaded_musicgen_model import LoadedMusicgenModel
 from ai_simple_engine_musicgen.consts import MUSICGEN_MODEL_FAMILY_NAME
 from ai_simple_engine.models.loaded_model import LoadedModel
 from ai_simple_engine.models.loaders.abstract import ModelLoader
@@ -7,7 +7,7 @@ from ai_simple_engine.device.base import Device
 from transformers import AutoProcessor, MusicgenForConditionalGeneration
 
 
-class MusicGenLoader(
+class MusicgenLoader(
     ModelLoader
 ):
     
@@ -22,7 +22,7 @@ class MusicGenLoader(
         installed_model: InstalledModel,
         *,
         device: Device
-    ) -> LoadedModel[LoadedMusicGenModel]:
+    ) -> LoadedModel[LoadedMusicgenModel]:
         processor = AutoProcessor.from_pretrained(installed_model.path)
         network = MusicgenForConditionalGeneration.from_pretrained(installed_model.path)
         
@@ -30,7 +30,7 @@ class MusicGenLoader(
 
         return LoadedModel(
             installed_model = installed_model,
-            instance = LoadedMusicGenModel(
+            instance = LoadedMusicgenModel(
                 processor = processor,
                 network = network
             )

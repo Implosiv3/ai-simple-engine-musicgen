@@ -5,5 +5,5 @@ The module that implements the use of the `musicgen` model for the AI Simple Eng
 This plugin includes:
 
 #### Model Loaders
-- `MusicGenLoader`
-- `TransformersMusicGenModelExecutor`
+- `MusicgenLoader`
+- `TransformersMusicgenModelExecutor`

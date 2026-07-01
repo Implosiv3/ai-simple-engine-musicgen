@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen = True)
-class LoadedMusicGenModel:
+class LoadedMusicgenModel:
 
     processor: AutoProcessor
     network: MusicgenForConditionalGeneration

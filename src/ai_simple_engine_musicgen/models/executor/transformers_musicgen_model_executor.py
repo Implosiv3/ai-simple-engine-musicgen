@@ -1,16 +1,16 @@
-from ai_simple_engine_musicgen.models.executor.abstract import MusicGenModelExecutorAbstract
-from ai_simple_engine_musicgen.models.loaded_musicgen_model import LoadedMusicGenModel
+from ai_simple_engine_musicgen.models.executor.abstract import MusicgenModelExecutorAbstract
+from ai_simple_engine_musicgen.models.loaded_musicgen_model import LoadedMusicgenModel
 from ai_simple_engine.models.loaded_model import LoadedModel
 from ai_simple_engine.types.audio import Audio
 
 
-class TransformersMusicGenModelExecutor(
-    MusicGenModelExecutorAbstract
+class TransformersMusicgenModelExecutor(
+    MusicgenModelExecutorAbstract
 ):
 
     async def generate(
         self,
-        model: LoadedModel[LoadedMusicGenModel],
+        model: LoadedModel[LoadedMusicgenModel],
         prompt: str,
         *,
         max_new_tokens: int,
