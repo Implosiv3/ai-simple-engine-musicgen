@@ -1,19 +1,22 @@
-from ai_simple_engine_runtime_transformers_musicgen.model.loaded_musicgen_model import LoadedMusicgenModel
 from ai_simple_engine.models.loaded_model import LoadedModel
 from ai_simple_engine.models.executor.abstract import ModelExecutor
 from ai_simple_engine.types.audio import Audio
 from abc import ABC, abstractmethod
+from typing import TypeVar, Generic
 
+
+TModel = TypeVar("TModel")
 
 class MusicgenModelExecutorAbstract(
     ModelExecutor,
+    Generic[TModel],
     ABC
 ):
 
     @abstractmethod
     async def generate(
         self,
-        model: LoadedModel[LoadedMusicgenModel],
+        model: LoadedModel[TModel],
         prompt: str,
         *,
         max_new_tokens: int,

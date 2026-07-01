@@ -1,6 +1,6 @@
 [project]
 name = "ai-simple-engine-musicgen"
-version = "0.0.7"
+version = "0.0.8"
 description = "AI Simple Engine Musicgen Module"
 authors = [
     {name = "danialcala94", email = "danielalcalavalera@gmail.com"}
@@ -10,7 +10,7 @@ requires-python = ">=3.10,<3.12"
 
 [tool.poetry.dependencies]
 # Mandatory
-ai-simple-engine = { version = ">=0.1.8,<1.0.0", optional = false }
+ai-simple-engine = { version = ">=0.1.9,<1.0.0", optional = false }
 ai-simple-engine-common = { version = ">=0.0.3,<1.0.0", optional = false }
 # Optional
 
