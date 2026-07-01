@@ -1,5 +1,5 @@
 from ai_simple_engine_musicgen.models.loaded_musicgen_model import LoadedMusicgenModel
-from ai_simple_engine_musicgen.consts import MUSICGEN_MODEL_FAMILY_NAME
+from ai_simple_engine_musicgen.consts import MUSICGEN_MODEL_FAMILY
 from ai_simple_engine.models.loaded_model import LoadedModel
 from ai_simple_engine.models.loaders.abstract import ModelLoader
 from ai_simple_engine.models.installed_model import InstalledModel
@@ -15,7 +15,7 @@ class MusicgenLoader(
     def family(
         self
     ) -> str:
-        return MUSICGEN_MODEL_FAMILY_NAME
+        return MUSICGEN_MODEL_FAMILY
 
     async def load(
         self,

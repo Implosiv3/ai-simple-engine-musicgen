@@ -13,6 +13,18 @@ files = [
 ]
 
 [[package]]
+name = "ai-simple-engine-common"
+version = "0.0.3"
+description = "AI Simple Engine Common Module"
+optional = false
+python-versions = "<3.12,>=3.10"
+groups = ["main"]
+files = [
+    {file = "ai_simple_engine_common-0.0.3-py3-none-any.whl", hash = "sha256:1322dbeb9dbda4237f0c958914940bb0377476314d0aa7fedfdad9b80213a62e"},
+    {file = "ai_simple_engine_common-0.0.3.tar.gz", hash = "sha256:67c2695bd2367b0e290379964abda076de81df9e38ee1d9ab49cbd0294e7bb6b"},
+]
+
+[[package]]
 name = "annotated-doc"
 version = "0.0.4"
 description = "Document parameters, class attributes, return types, and variables inline, with Annotated."
@@ -1386,4 +1398,4 @@ markers = {dev = "python_version == \"3.10\""}
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10,<3.12"
-content-hash = "947537e18aad6f052dd43d3068ba79fffda64bfb3addb06358c41ca7cef7fc5f"
+content-hash = "c7e2f06894d4239d194bfcb21c15f616ae81cbfe1c422c7902f4e16ee7c27a40"

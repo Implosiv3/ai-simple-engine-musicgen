@@ -1,7 +1,7 @@
-from ai_simple_engine_musicgen.consts import MUSICGEN_MODEL_FAMILY_NAME
 from ai_simple_engine_musicgen.models.executor.transformers_musicgen_model_executor import TransformersMusicgenModelExecutor
 from ai_simple_engine_musicgen.models.executor.registry.musicgen_model_executor_registry import MusicgenModelExecutorRegistry
 from ai_simple_engine_musicgen.models.loaders.musicgen_loader import MusicgenLoader
+from ai_simple_engine_musicgen.consts import MUSICGEN_MODEL_FAMILY
 from ai_simple_engine.engine_builder import EngineBuilder
 from ai_simple_engine.plugins.plugin import Plugin
 
@@ -44,7 +44,7 @@ class MusicgenPlugin(
         registry = MusicgenModelExecutorRegistry()
 
         registry.register(
-            MUSICGEN_MODEL_FAMILY_NAME,
+            MUSICGEN_MODEL_FAMILY,
             TransformersMusicgenModelExecutor()
         )
 
