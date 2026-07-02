@@ -1,12 +1,12 @@
 from ai_simple_engine.types.data_type.base import AUDIO, LOADED_MODEL, STRING
 from ai_simple_engine.models.executor.registry.family_model_executor_registry import FamilyModelExecutorRegistry
-from ai_simple_engine.graph.operation.base import Operation
+from ai_simple_engine.graph.operation.abstract.atomic_operation import AtomicOperation
 from ai_simple_engine.graph.input import Input
 from ai_simple_engine.graph.output import Output
 
 
 class GenerateMusic(
-    Operation
+    AtomicOperation
 ):
 
     model: 'LoadedModel[LoadedMusicgenModel]' = Input(LOADED_MODEL)
@@ -14,7 +14,6 @@ class GenerateMusic(
     The `LoadedModel` tha will enter as input.
     """
     prompt = Input(STRING)
-    # TODO: Transform this into duration and convert it
     max_new_tokens = Input(
         int,
         default = 256

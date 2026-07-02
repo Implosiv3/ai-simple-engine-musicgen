@@ -5,7 +5,8 @@ from abc import ABC, abstractmethod
 from typing import TypeVar, Generic
 
 
-TModel = TypeVar("TModel")
+TModel = TypeVar('TModel')
+TInfo = TypeVar('TInfo')
 
 class MusicgenModelExecutorAbstract(
     ModelExecutor,
@@ -16,7 +17,7 @@ class MusicgenModelExecutorAbstract(
     @abstractmethod
     async def generate(
         self,
-        model: LoadedModel[TModel],
+        model: LoadedModel[TModel, TInfo],
         prompt: str,
         *,
         max_new_tokens: int,
