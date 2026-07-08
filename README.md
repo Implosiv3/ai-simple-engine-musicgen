@@ -7,3 +7,6 @@ This plugin includes:
 #### Model Loaders
 - `MusicgenLoader`
 - `TransformersMusicgenModelExecutor`
+
+
+Project archived. Migrated to `aibusy`.
